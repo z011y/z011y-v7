@@ -1,0 +1,51 @@
+@import 'reset.css';
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&family=Quicksand:wght@400;700&display=swap');
+
+:root {
+  --font-family-sans: 'Quicksand';
+  --font-family-mono: 'JetBrains Mono';
+  --primary-color: #3e63dd;
+  --bg-color: #fcfcfc;
+  --accent-color: #f3f3f3;
+  --border-color: #e8e8e8;
+  --fg-color: #171717;
+}
+
+[data-theme='dark'] {
+  --bg-color: #161616;
+  --accent-color: #232323;
+  --border-color: #2e2e2e;
+  --fg-color: #ededed;
+}
+
+body {
+  font-family: var(--font-family-sans);
+  background-color: var(--bg-color);
+  color: var(--fg-color);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin-block-end: 0;
+  margin-block-start: 0;
+  font-weight: 700;
+}
+
+h4,
+h5,
+h6 {
+  font-family: var(--font-family-mono);
+}
+
+p {
+  font-weight: 400;
+}
+
+button:hover {
+  cursor: pointer;
+}
