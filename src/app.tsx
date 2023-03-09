@@ -3,6 +3,7 @@ import { StrictMode } from 'react';
 import 'public/base.css';
 import Router from 'src/components/Router';
 import ThemeProvider from 'src/contexts/theme';
+import Layout from 'src/layout';
 
 interface AppProps {
   initialPath: string;
@@ -41,7 +42,9 @@ const App = ({ initialPath }: AppProps) => {
       <body>
         <StrictMode>
           <ThemeProvider>
-            <Router initialPath={initialPath} />
+            <Layout>
+              <Router initialPath={initialPath} />
+            </Layout>
           </ThemeProvider>
         </StrictMode>
       </body>

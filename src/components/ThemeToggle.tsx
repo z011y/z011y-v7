@@ -1,4 +1,5 @@
 import { useContext } from 'react';
+import { Sun, Moon } from '@phosphor-icons/react';
 
 import { Theme, ThemeContext } from 'src/contexts/theme';
 
@@ -24,10 +25,10 @@ const ThemeToggle = () => {
     }
   };
 
-  return (
-    <button onClick={() => toggleTheme(theme)}>
-      {theme === 'dark' ? 'light' : 'dark'}
-    </button>
+  return theme === 'dark' ? (
+    <Sun onClick={() => toggleTheme(theme)} />
+  ) : (
+    <Moon onClick={() => toggleTheme(theme)} />
   );
 };
 
