@@ -5,6 +5,7 @@ const SubNav = () => {
     <div className="subnav-container">
       <div className="subnav-links-wrapper">
         <Link to="/">Home</Link>
+        <Link to="/projects">Projects</Link>
         <Link to="/blog">Blog</Link>
       </div>
     </div>

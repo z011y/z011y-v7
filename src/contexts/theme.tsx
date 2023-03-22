@@ -5,7 +5,7 @@ export type Theme = 'light' | 'dark';
 
 type ThemeContext = {
   theme: Theme;
-  setTheme: Dispatch<SetStateAction<Theme>>;
+  setTheme: Dispatch<SetStateAction<Theme>> | null;
 };
 
 interface IThemeProviderProps {
@@ -14,7 +14,7 @@ interface IThemeProviderProps {
 
 export const ThemeContext = createContext<ThemeContext>({
   theme: 'light',
-  setTheme: () => {},
+  setTheme: null,
 });
 
 const ThemeProvider = ({ children }: IThemeProviderProps) => {

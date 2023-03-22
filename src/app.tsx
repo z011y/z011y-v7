@@ -1,9 +1,8 @@
 import { StrictMode } from 'react';
 
-import 'public/base.css';
-import Router from 'src/components/Router';
+import 'public/styles/base.css';
 import ThemeProvider from 'src/contexts/theme';
-import Layout from 'src/layout';
+import Router from 'src/router';
 
 interface AppProps {
   initialPath: string;
@@ -22,7 +21,7 @@ const App = ({ initialPath }: AppProps) => {
               const getInitialTheme = () => {
                 const cachedTheme = localStorage.getItem('theme') ?? '';
                 const systemThemeMatchable = window.matchMedia('(prefers-color-scheme: dark)');
-            
+
                 switch (true) {
                   case ['light', 'dark'].includes(cachedTheme):
                     return cachedTheme;
@@ -42,9 +41,7 @@ const App = ({ initialPath }: AppProps) => {
       <body>
         <StrictMode>
           <ThemeProvider>
-            <Layout>
-              <Router initialPath={initialPath} />
-            </Layout>
+            <Router initialPath={initialPath} />
           </ThemeProvider>
         </StrictMode>
       </body>

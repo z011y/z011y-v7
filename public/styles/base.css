@@ -1,15 +1,17 @@
-@import 'reset.css';
-@import 'header.css';
+@import url('../reset.css');
+@import url('header.css');
+@import url('home.css');
 @import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&family=Quicksand:wght@400;700&display=swap');
 
 :root {
   --font-family-sans: 'Quicksand';
-  --font-family-mono: 'JetBrains Mono';
-  --primary-color: #3e63dd;
+  --font-family-mono: 'Hack';
+  --primary-color: #849DFF;
   --bg-color: #fcfcfc;
   --accent-color: #f3f3f3;
   --border-color: #e8e8e8;
   --fg-color: #171717;
+  --text-color: #6F6F6F;
 }
 
 [data-theme='dark'] {
@@ -17,6 +19,7 @@
   --accent-color: #232323;
   --border-color: #2e2e2e;
   --fg-color: #ededed;
+  --text-color: #A0A0A0;
 }
 
 body {
@@ -48,8 +51,7 @@ p {
 }
 
 a {
-  color: var(--fg-color);
-  opacity: 0.5;
+  color: var(--text-color);
   text-decoration: none;
 }
 

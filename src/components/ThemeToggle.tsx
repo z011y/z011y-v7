@@ -7,6 +7,10 @@ const ThemeToggle = () => {
   const { theme, setTheme } = useContext(ThemeContext);
 
   const transitionTheme = (targetTheme: Theme) => {
+    if (!setTheme) {
+      throw new Error('ThemeContext does not exist outside the ThemeProvider context.')
+    }
+
     document.documentElement.setAttribute('data-theme', targetTheme);
     localStorage.setItem('theme', targetTheme);
     setTheme(targetTheme);

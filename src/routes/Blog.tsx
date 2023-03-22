@@ -1,12 +1,12 @@
 import Link from 'src/components/Link';
 
-const Page = () => {
+const Blog = () => {
   return (
     <>
       <Link to="/">Home</Link>
-      <h1>Page</h1>
+      <h1>Blog</h1>
     </>
   );
 };
 
-export default Page;
+export default Blog;

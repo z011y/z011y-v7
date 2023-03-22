@@ -3,6 +3,7 @@
   top: 0;
   left: 0;
   width: 100%;
+  z-index: 10;
 }
 
 .nav-container {
@@ -13,8 +14,14 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding-left: 1rem;
-  padding-right: 1rem;
+  padding-left: 2rem;
+  padding-right: 2rem;
+}
+
+.nav-icons-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
 }
 
 .subnav-container {
@@ -29,5 +36,9 @@
 
 .subnav-links-wrapper {
   display: flex;
-  gap: 0.5rem;
+  gap: 1rem;
+  font-family: var(--font-family-mono), mono, sans-serif;
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.1rem;
 }
